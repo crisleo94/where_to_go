@@ -1,0 +1,33 @@
+.search {
+  position: relative;
+  border-radius: 12rem;
+  background-color: rgba(255, 255, 255, .5);
+  margin-right: 5rem;
+  margin-left: 0;
+  width: 100%;
+}
+
+.search:hover {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+.searchIcon {
+  padding: 0 2rem;
+  height: 100%;
+  position: absolute;
+}
+
+.inputRoot {
+  color: inherit;
+}
+
+.inputInput {
+  padding: repeat(3, 1rem) 0;
+  padding-left: 1rem;
+  width: 100%;
+  transition: width 1s;
+}
+
+.inputInput:hover {
+  width: 95%;
+}
