@@ -3,10 +3,16 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  min-height: 0;
+  min-width: 0;
 }
 
 .title {
   padding-left: 1rem;
+  overflow: hidden;
+  min-width: 0;
+  text-shadow: rgba(0, 0, 0, 25%) 2px 2px 2px;
+  font-size: 18px;
 }
 
 .searchContainer {

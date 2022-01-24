@@ -1,8 +1,9 @@
-.mapContainer {
+.container {
   display: flex;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
+  overflow-y: hidden;
 }
 
 .sidebar {
@@ -16,4 +17,9 @@
   left: 0;
   margin: 12px;
   border-radius: 4px;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 90vh;
 }

@@ -1,16 +1,17 @@
 import { useRef, useEffect, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
 import styles from '../styles/map.module.css'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
-mapboxgl.accessToken =
-  'pk.eyJ1IjoiY3Jpc2xlbzk0IiwiYSI6ImNrMm9pcDU1ZjBic3kzbHM3bmdzaXZhNWwifQ.bEIQoEJFg30p0vJ26O7eog'
+mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOXAPIKEY
+  
 
 export default function Map() {
   const mapContainer = useRef(null)
   const map = useRef(null)
-  const [lng, setLng] = useState(-70.9)
-  const [lat, setLat] = useState(33.4)
-  const [zoom, setZoom] = useState(9)
+  const [lng, setLng] = useState(-102.54)
+  const [lat, setLat] = useState(38.4)
+  const [zoom, setZoom] = useState(4)
 
   useEffect(() => {
     if(map.current) return
