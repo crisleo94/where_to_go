@@ -1,29 +1,31 @@
 import { AppBar, Box, InputBase, Toolbar, Typography } from '@material-ui/core'
-import { Autocomplete } from '@material-ui/lab'
 import SearchIcon from '@material-ui/icons/Search'
+import { Autocomplete } from '@material-ui/lab'
 import styles from '../styles/header.module.css'
 
 export default function Header() {
   return (
-    <AppBar position='static'>
-      <Toolbar className={styles.toolbar}>
-        <Typography variant='h5' className={styles.title}>
+    <div className={styles.container}>
+        <h5 className={styles.title}>
           Where to Go!
-        </Typography>
-        <Box display='flex'>
-          <Typography variant='h6' className={styles.title}>
+        </h5>
+        <div className={styles.searchContainer}>
+          <h6 className={styles.subtitle}>
             Explore new places
-          </Typography>
-          <Autocomplete>
+          </h6>
+          {/* <Autocomplete> */}
             <div className={styles.search}>
               <div className={styles.searchIcon}>
                 <SearchIcon />
               </div>
-              <InputBase placeholder='Search...' className={{ root: styles.inputRoot, input: styles.inputInput }} />
+              <input
+                type='text'
+                placeholder='Search...'
+                className={styles.input}
+              />
             </div>
-          </Autocomplete>
-        </Box>
-      </Toolbar>
-    </AppBar>
+          {/* </Autocomplete> */}
+        </div>
+    </div>
   )
 }

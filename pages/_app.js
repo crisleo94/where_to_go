@@ -4,12 +4,14 @@ import Header from '../components/Header'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Header />
-      <Grid container spacing={3} style={{ width: '100%' }}>
+    <div className='main-container'>
+      <div className='header-container'>
+        <Header />
+      </div>
+      <div className='children-container'>
         <Component {...pageProps} />
-      </Grid>
-    </>
+      </div>
+    </div>
   )
 }
 
