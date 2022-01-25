@@ -1,3 +1,5 @@
-export default function PlaceDetails() {
-  return <div>Enter</div>
+
+
+export default function PlaceDetails({ place }) {
+  return <div>{place.name} - <b>{place.location}</b></div>
 }
