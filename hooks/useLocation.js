@@ -22,7 +22,7 @@ export const useLocation = () => {
       return
     }
 
-    watcher = geo.watchPosition(onChange, onError)
+    const watcher = geo.watchPosition(onChange, onError)
 
     return () => geo.clearWatch(watcher)
   }, [])
